@@ -6,15 +6,27 @@
 	<version>0.1.0</version>
 	<type>modification</type>
 
-	<install for="2.0-2.0.99">
+	<install for="2.0-2.0.99, 2.1 Beta 2">
 		<readme type="file" parsebbc="true">readme.txt</readme>
 		<database>install.php</database>
 		<code>hooks.php</code>
+		<require-file name="source/SMDownloads.php" destination="$sourcedir" />
+		<require-file name="source/SMDownloads-Admin.php" destination="$sourcedir" />
+		<require-file name="source/SMDownloads-Subs.php" destination="$sourcedir" />
+		<require-file name="template/SMDownloads.template.php" destination="$themedir" />
+		<require-file name="template/SMDownloads-Admin.template.php" destination="$themedir" />
+		<require-file name="languages/SMDownloads.english.php" destination="$languagedir" />
 	</install>
 
-	<uninstall for="2.0-2.0.99">
+	<uninstall for="2.0-2.0.99, 2.1 Beta 2">
 		<database>uninstall.php</database>
 		<code>hooks.php</code>
+		<remove-file name="$sourcedir/SMDownloads.php" />
+		<remove-file name="$sourcedir/SMDownloads-Admin.php" />
+		<remove-file name="$sourcedir/SMDownloads-Subs.php" />
+		<remove-file name="$themedir/SMDownloads.template.php" />
+		<remove-file name="$themedir/SMDownloads-Admin.template.php" />
+		<remove-file name="$languagedir/SMDownloads.english.php" />
 	</uninstall>
 
 </package-info>

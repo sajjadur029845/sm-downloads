@@ -13,9 +13,9 @@
  * Check to make sure SMF exists in this directory
  */
 if (file_exists(dirname(__FILE__) . '/SSI.php') && !defined('SMF'))
-	require_once(dirname(__FILE__) . '/SSI.php');
+    require_once(dirname(__FILE__) . '/SSI.php');
 elseif (!defined('SMF'))
-	die('<strong>Error:</strong> Cannot install - please verify you put this in the same place as SMF\'s index.php.');
+    die('<strong>Error:</strong> Cannot install - please verify you put this in the same place as SMF\'s index.php.');
 
 /**
  * Define the hooks in an array
@@ -24,10 +24,10 @@ elseif (!defined('SMF'))
  * $hook_functions = array('integrate_actions', 'modification_actions');
  */
 $hook_functions = array(
-	'integrate_pre_include' => '$sourcedir/Subs-SMDownloads.php',
-	'integrate_pre_load' => 'smdlInit',
-	'integrate_admin_areas' => 'smdlAdminAreas',
-	'integrate_menu_buttons' => 'smdlMenuButtons',
+    'integrate_pre_include' => '$sourcedir/Subs-SMDownloads.php',
+    'integrate_actions' => 'smdlActionArray',
+    'integrate_admin_areas' => 'smdlAdminAreas',
+    'integrate_menu_buttons' => 'smdlMenuButtons',
 );
 
 /**
@@ -42,4 +42,4 @@ else
  * Execute the hook install/uninstall
  */
 foreach ($hook_functions as $hook => $function)
-	$call($hook, $function);
+    $call($hook, $function);

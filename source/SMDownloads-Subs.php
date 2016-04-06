@@ -11,29 +11,34 @@
  */
 
 if (!defined('SMF'))
-	die('No direct access...');
+    die('No direct access...');
+
+// Init the entire modification :)
+smdl_init();
 
 function smdl_init()
 {
-	if ($modSettings['smdl_enable'] == 0)
-		return;
+    global $modSettings;
 
-	loadLanguage('SMDownloads');
+    if ($modSettings['smdl_enable'] == 0)
+        return;
+
+    loadLanguage('SMDownloads');
 }
 
 function smdlActionArray(&$actionArray)
 {
-	$actionArray['downloads'] = array('SMDownloads.php', 'SMDownloads');
+    $actionArray['downloads'] = array('SMDownloads.php', 'SMDownloads');
 }
 
 function smdlAdminAreas(&$admin_areas)
 {
-	
+    
 }
 
 function smdlMenuButtons(&$menu_buttons)
 {
-	
+    
 }
 
 ?>
