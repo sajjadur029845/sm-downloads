@@ -25,7 +25,6 @@ elseif (!defined('SMF'))
  */
 $hook_functions = array(
 	'integrate_pre_include' => '$sourcedir/Subs-SMDownloads.php',
-	'integrate_pre_load' => 'smdlInit',
 	'integrate_admin_areas' => 'smdlAdminAreas',
 	'integrate_menu_buttons' => 'smdlMenuButtons',
 );
