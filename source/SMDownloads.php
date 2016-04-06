@@ -22,7 +22,8 @@ function SMDownloads()
 		'comment' => 'SMDownloadsComment',
 		'moderate' => 'SMDownloadsModerate',
 		'rate' => 'SMDownloadsRate',
-		'download' => 'SMDownloadsDownload'
+		'download' => 'SMDownloadsDownload',
+		'view' => 'SMDownloadsView',
 	);
 
 	if (isset($_REQUEST['sa']) && in_array($subActions, $_REQUEST['sa']))
