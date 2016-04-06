@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>jblaze:sm-downloads</id>
+	<name>SM Downloads</name>
+	<version>0.1.0</version>
+	<type>modification</type>
+
+	<install for="2.0-2.0.99">
+		<readme type="file" parsebbc="true">readme.txt</readme>
+		<database>install.php</database>
+		<code>hooks.php</code>
+	</install>
+
+	<uninstall for="2.0-2.0.99">
+		<database>uninstall.php</database>
+		<code>removesettings.php</code>
+	</uninstall>
+
+</package-info>
