@@ -14,7 +14,7 @@
 
 	<uninstall for="2.0-2.0.99">
 		<database>uninstall.php</database>
-		<code>removesettings.php</code>
+		<code>hooks.php</code>
 	</uninstall>
 
 </package-info>
