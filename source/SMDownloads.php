@@ -11,25 +11,25 @@
  */
 
 if (!defined('SMF'))
-	die('No direct access...');
+    die('No direct access...');
 
 function SMDownloads()
 {
-	$subActions = array(
-		'main' => 'SMDownloadsMain',
-		'add' => 'SMDownloadsAdd',
-		'remove' => 'SMDownloadsRemove',
-		'comment' => 'SMDownloadsComment',
-		'moderate' => 'SMDownloadsModerate',
-		'rate' => 'SMDownloadsRate',
-		'download' => 'SMDownloadsDownload',
-		'view' => 'SMDownloadsView',
-	);
+    $subActions = array(
+        'add' => 'SMDownloadsAdd',
+        'comment' => 'SMDownloadsComment',
+        'download' => 'SMDownloadsDownload',
+        'main' => 'SMDownloadsMain',
+        'moderate' => 'SMDownloadsModerate',
+        'rate' => 'SMDownloadsRate',
+        'remove' => 'SMDownloadsRemove',
+        'view' => 'SMDownloadsView',
+    );
 
-	if (isset($_REQUEST['sa']) && in_array($subActions, $_REQUEST['sa']))
-		$subActions[$_REQUEST['sa']]();
-	else
-		$subActions['main']();
+    if (isset($_REQUEST['sa']) && in_array($subActions, $_REQUEST['sa']))
+        $subActions[$_REQUEST['sa']]();
+    else
+        $subActions['main']();
 }
 
 ?>
