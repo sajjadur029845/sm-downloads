@@ -23,7 +23,12 @@ elseif (!defined('SMF'))
  * Example:
  * $hook_functions = array('integrate_actions', 'modification_actions');
  */
-$hook_functions = array();
+$hook_functions = array(
+	'integrate_pre_include' => '$sourcedir/Subs-SMDownloads.php',
+	'integrate_pre_load' => 'smdlInit',
+	'integrate_admin_areas' => 'smdlAdminAreas',
+	'integrate_menu_buttons' => 'smdlMenuButtons',
+);
 
 /**
  * This determines whether we're installing or uninstalling
