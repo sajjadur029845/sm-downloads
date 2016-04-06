@@ -13,4 +13,27 @@
 if (!defined('SMF'))
 	die('No direct access...');
 
+function smdl_init()
+{
+	if ($modSettings['smdl_enable'] == 0)
+		return;
+
+	loadLanguage('SMDownloads');
+}
+
+function smdlActionArray(&$actionArray)
+{
+	$actionArray['downloads'] = array('SMDownloads.php', 'SMDownloads');
+}
+
+function smdlAdminAreas(&$admin_areas)
+{
+	
+}
+
+function smdlMenuButtons(&$menu_buttons)
+{
+	
+}
+
 ?>
