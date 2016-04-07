@@ -12,6 +12,7 @@
 		<code>hooks.php</code>
 		<require-file name="source/SMDownloads.php" destination="$sourcedir" />
 		<require-file name="source/SMDownloads-Admin.php" destination="$sourcedir" />
+		<require-file name="source/SMDownloads-Moderate.php" destination="$sourcedir" />
 		<require-file name="source/SMDownloads-Subs.php" destination="$sourcedir" />
 		<require-file name="template/SMDownloads.template.php" destination="$themedir" />
 		<require-file name="template/SMDownloads-Admin.template.php" destination="$themedir" />
@@ -23,6 +24,7 @@
 		<code>hooks.php</code>
 		<remove-file name="$sourcedir/SMDownloads.php" />
 		<remove-file name="$sourcedir/SMDownloads-Admin.php" />
+		<remove-file name="$sourcedir/SMDownloads-Moderate.php" />
 		<remove-file name="$sourcedir/SMDownloads-Subs.php" />
 		<remove-file name="$themedir/SMDownloads.template.php" />
 		<remove-file name="$themedir/SMDownloads-Admin.template.php" />
