@@ -13,7 +13,7 @@
 if (!defined('SMF'))
     die('No direct access...');
 
-function SMDownloadsAdmin()
+function SMDownloadsModerate()
 {
     
 }
